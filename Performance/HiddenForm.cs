@@ -7,7 +7,9 @@ using System.Windows.Forms;
 namespace Performance
 {
     public partial class HiddenForm : Form
-	{
+    {
+        private const int Interval = 1000;
+
         private List<Icon> _cpuIcons;
 
         private List<Icon> _hardDriveIcons;
@@ -63,14 +65,14 @@ namespace Performance
 				Application.Exit();
 		}
 
-		private void InitTimer()
-		{
-			var timer = new Timer {Interval = 1000};
-		    timer.Tick += TimerTick;
-			timer.Start();
-		}
+        private void InitTimer()
+        {
+            var timer = new Timer {Interval = Interval};
+            timer.Tick += TimerTick;
+            timer.Start();
+        }
 
-		private void TimerTick(object sender, EventArgs e)
+        private void TimerTick(object sender, EventArgs e)
 		{
 			FillMemory();
             FillCPU();
