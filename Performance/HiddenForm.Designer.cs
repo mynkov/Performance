@@ -1,6 +1,6 @@
 ﻿namespace Performance
 {
-    partial class HideForm
+    partial class HiddenForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HideForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HiddenForm));
             this.iconMemory = new System.Windows.Forms.NotifyIcon(this.components);
             this.perfCPU = new System.Diagnostics.PerformanceCounter();
             this.iconCPU = new System.Windows.Forms.NotifyIcon(this.components);
             this.perfMemory = new System.Diagnostics.PerformanceCounter();
-            this.perfHardDisk = new System.Diagnostics.PerformanceCounter();
-            this.iconHardDisk = new System.Windows.Forms.NotifyIcon(this.components);
+            this.perfHardDrive = new System.Diagnostics.PerformanceCounter();
+            this.iconHardDrive = new System.Windows.Forms.NotifyIcon(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.perfCPU)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.perfMemory)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.perfHardDisk)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.perfHardDrive)).BeginInit();
             this.SuspendLayout();
             // 
             // iconMemory
@@ -61,30 +61,30 @@
             this.perfMemory.CategoryName = "Память";
             this.perfMemory.CounterName = "Доступно МБ";
             // 
-            // perfHardDisk
+            // perfHardDrive
             // 
-            this.perfHardDisk.CategoryName = "Логический диск";
-            this.perfHardDisk.CounterName = "% активности диска";
-            this.perfHardDisk.InstanceName = "_Total";
+            this.perfHardDrive.CategoryName = "Логический диск";
+            this.perfHardDrive.CounterName = "% активности диска";
+            this.perfHardDrive.InstanceName = "_Total";
             // 
-            // iconHardDisk
+            // iconHardDrive
             // 
-            this.iconHardDisk.Text = "notifyIcon1";
-            this.iconHardDisk.Visible = true;
+            this.iconHardDrive.Text = "notifyIcon1";
+            this.iconHardDrive.Visible = true;
             // 
-            // HideForm
+            // HiddenForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 262);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "HideForm";
+            this.Name = "HiddenForm";
             this.ShowInTaskbar = false;
-            this.Text = "Form1";
+            this.Text = "HiddenForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             ((System.ComponentModel.ISupportInitialize)(this.perfCPU)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.perfMemory)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.perfHardDisk)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.perfHardDrive)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -94,8 +94,8 @@
         private System.Windows.Forms.NotifyIcon iconCPU;
         private System.Diagnostics.PerformanceCounter perfCPU;
         private System.Diagnostics.PerformanceCounter perfMemory;
-        private System.Diagnostics.PerformanceCounter perfHardDisk;
-        private System.Windows.Forms.NotifyIcon iconHardDisk;
+        private System.Diagnostics.PerformanceCounter perfHardDrive;
+        private System.Windows.Forms.NotifyIcon iconHardDrive;
         private System.Windows.Forms.NotifyIcon iconMemory;
     }
 }

@@ -1,47 +1,24 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Management;
 
 namespace Performance
 {
     public class MemoryInfo
     {
-        private static int _totalMemory;
-
-        public static int TotalMemory
-        {
-            get
-            {
-                return _totalMemory;
-            }
-        }
-
-        static MemoryInfo()
-        {
-            _totalMemory = GetTotalMemory();
-        }
+        public static readonly int TotalMemory = GetTotalMemory();
 
         public static int GetMemoryPercent(int freeMemory)
         {
-            return (int)(100 - ((double)freeMemory / (double)_totalMemory) * 100);
+            return (int)(100 - ((double)freeMemory / (double)TotalMemory) * 100);
         }
 
         private static int GetTotalMemory()
         {
-            int result = 0;
+            var managementObjectSearcher = new ManagementObjectSearcher("SELECT * FROM Win32_OperatingSystem");
+            var managementBaseObject = managementObjectSearcher.Get().Cast<ManagementBaseObject>().First();
 
-            ManagementObjectSearcher managementObjectSearcher = new ManagementObjectSearcher("SELECT * FROM Win32_OperatingSystem");
-            ManagementObjectCollection managementObjectCollection = managementObjectSearcher.Get();
-
-            foreach (var item in managementObjectCollection)
-            {
-                result = Convert.ToInt32(item["TotalVisibleMemorySize"]) / 1024;
-                break;
-            }
-            return result;
+            return Convert.ToInt32(managementBaseObject["TotalVisibleMemorySize"]) / 1024;
         }
-
     }
 }

@@ -33,6 +33,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Performance.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -47,36 +50,56 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="HideForm.cs">
+    <Compile Include="HiddenForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HideForm.Designer.cs">
-      <DependentUpon>HideForm.cs</DependentUpon>
+    <Compile Include="HiddenForm.Designer.cs">
+      <DependentUpon>HiddenForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MemoryInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="HideForm.resx">
-      <DependentUpon>HideForm.cs</DependentUpon>
+    <EmbeddedResource Include="HiddenForm.resx">
+      <DependentUpon>HiddenForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pictures\CPU.0.ico" />
+    <EmbeddedResource Include="Pictures\CPU.1.ico" />
+    <EmbeddedResource Include="Pictures\CPU.10.ico" />
+    <EmbeddedResource Include="Pictures\CPU.2.ico" />
+    <EmbeddedResource Include="Pictures\CPU.3.ico" />
+    <EmbeddedResource Include="Pictures\CPU.4.ico" />
+    <EmbeddedResource Include="Pictures\CPU.5.ico" />
+    <EmbeddedResource Include="Pictures\CPU.6.ico" />
+    <EmbeddedResource Include="Pictures\CPU.7.ico" />
+    <EmbeddedResource Include="Pictures\CPU.8.ico" />
+    <EmbeddedResource Include="Pictures\CPU.9.ico" />
+    <EmbeddedResource Include="Pictures\HardDrive.0.ico" />
+    <EmbeddedResource Include="Pictures\HardDrive.1.ico" />
+    <EmbeddedResource Include="Pictures\HardDrive.10.ico" />
+    <EmbeddedResource Include="Pictures\HardDrive.2.ico" />
+    <EmbeddedResource Include="Pictures\HardDrive.3.ico" />
+    <EmbeddedResource Include="Pictures\HardDrive.4.ico" />
+    <EmbeddedResource Include="Pictures\HardDrive.5.ico" />
+    <EmbeddedResource Include="Pictures\HardDrive.6.ico" />
+    <EmbeddedResource Include="Pictures\HardDrive.7.ico" />
+    <EmbeddedResource Include="Pictures\HardDrive.8.ico" />
+    <EmbeddedResource Include="Pictures\HardDrive.9.ico" />
+    <EmbeddedResource Include="Pictures\Memory.0.ico" />
+    <EmbeddedResource Include="Pictures\Memory.1.ico" />
+    <EmbeddedResource Include="Pictures\Memory.10.ico" />
+    <EmbeddedResource Include="Pictures\Memory.2.ico" />
+    <EmbeddedResource Include="Pictures\Memory.3.ico" />
+    <EmbeddedResource Include="Pictures\Memory.4.ico" />
+    <EmbeddedResource Include="Pictures\Memory.5.ico" />
+    <EmbeddedResource Include="Pictures\Memory.6.ico" />
+    <EmbeddedResource Include="Pictures\Memory.7.ico" />
+    <EmbeddedResource Include="Pictures\Memory.8.ico" />
+    <EmbeddedResource Include="Pictures\Memory.9.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Performance.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

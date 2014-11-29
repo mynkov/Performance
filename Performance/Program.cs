@@ -15,7 +15,7 @@ namespace Performance
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new HideForm());
+            Application.Run(new HiddenForm());
         }
     }
 }
