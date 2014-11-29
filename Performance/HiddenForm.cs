@@ -102,14 +102,15 @@ namespace Performance
             var memoryPercent = MemoryInfo.GetMemoryPercent(freeMemory);
             var index = (memoryPercent + 5)/10;
 
-            iconMemory.Text = string.Format(@"Memory: {0}%
+            iconMemory.Text = string.Format(
+@"Memory: {0}%
 Free: {1} MB
 Used: {2} MB
 Total: {3} MB",
-                                            memoryPercent,
-                                            freeMemory,
-                                            usedMemory,
-                                            MemoryInfo.TotalMemory);
+                memoryPercent,
+                freeMemory,
+                usedMemory,
+                MemoryInfo.TotalMemory);
             iconMemory.Icon = _memoryIcons[index];
         }
 	}
